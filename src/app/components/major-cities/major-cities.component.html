@@ -1,0 +1,18 @@
+<ul class="cities" *ngIf=" cities.length > 0">
+  <li class="cities__container firstLi">
+  </li>
+  <li class="cities__container" *ngFor="let city of cities">
+    <h4 class="cities__name">{{ city.city }}, {{ city.country }}.</h4>
+    <span class="text--blue">Actual</span>
+    <div class="cities__img"><img src="../../../assets/imgs/icons/{{ city.ic }}.png" title="icon"></div>
+    <p class="city__container__text">Temperatura: <span class="text--bold">{{ city.tp }}°</span>
+      <load-icon *ngIf="data === undefined"></load-icon>
+    </p>
+    <p class="city__container__text">Humedad: <span class="text--bold">{{ city.hu }}%</span>
+      <load-icon *ngIf="data === undefined"></load-icon>
+    </p>
+    <p class="city__container__text">Velocidad del viento: <span class="text--bold">{{ city.ws }} m/s</span>
+      <load-icon *ngIf="data === undefined"></load-icon>
+    </p>
+  </li>
+</ul>

@@ -1,0 +1,84 @@
+$bgc: #e6e6e6;
+$bdRadius: 5px;
+
+.cities{
+  height: 35vmax;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  list-style: none;
+  overflow-x: auto;
+}
+
+.firstLi{
+  background: url('../../../assets/imgs/backgroundLi.jpg') no-repeat center/100%;
+}
+
+.cities__title{
+  padding-top: 2em;
+}
+
+.cities__container{
+  position: relative;
+  margin: 0 10px;
+  max-width: 85vmin;
+  min-width: 65vmin;
+  height: 70%;
+  border-radius: $bdRadius;
+  padding: 10px;
+  background-color: $bgc;
+  box-shadow: 2px 2px 8px 0 #9999;
+}
+
+.cities__name{
+  max-width: 60%;
+  margin: 10px 0;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.cities__img{
+  position: absolute;
+  top: 1.5rem;
+  right: 10px;
+  height: 3.5rem;
+  width: 3.5rem;
+}
+
+.city__container__text{
+  margin: 10px 0;
+}
+
+.text--blue{
+  color: #2196f3;
+}
+
+.text--bold{
+  font-weight: bold;
+}
+
+@media only screen and ( min-width: 768px ){
+  .cities__container{
+    max-width: 70vmin;
+    min-width: 50vmin;
+  }
+}
+
+
+@media only screen and ( min-width: 1024px ){
+  .cities{
+    height: 15rem;
+  }
+  .cities__container{
+    width: 15rem;
+    height: 12rem;
+  }
+  .cities__img{
+    width: 5rem;
+    height: 5rem;
+  }
+}
+
+.cities::-webkit-scrollbar{
+  height: 0;
+}

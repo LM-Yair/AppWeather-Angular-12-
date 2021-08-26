@@ -1,0 +1,19 @@
+$bgc: #e6e6e6;
+
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $bgc;
+  box-shadow: 2px 2px 8px 0 #9999;
+}
+
+.header__img{
+  height: 4em;
+  width: 4em;
+  background: url('../assets/imgs/angular.svg') no-repeat top/106%;
+}
+
+.header__text{
+  font-size: 2em;
+}

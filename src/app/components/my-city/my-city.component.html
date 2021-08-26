@@ -1,0 +1,17 @@
+<div class="city">
+  <h2>Ciudad más cercana.</h2>
+  <div class="city__container">
+    <h4 class="city__container__title" >{{ weather.city }}, {{ weather.state }}, {{ weather.country }}</h4>
+    <div class="city__container__img"><img src="../../../assets/imgs/icons/{{ weather.ic }}.png" title="icon"></div>
+    <span class="text--blue">Actual</span>
+    <p class="city__container__text">Temperatura: <span class="text--bold">{{ weather.tp }}°</span>
+      <load-icon *ngIf="data === undefined"></load-icon>
+    </p>
+    <p class="city__container__text">Humedad: <span class="text--bold">{{ weather.hu }}%</span>
+      <load-icon *ngIf="data === undefined"></load-icon>
+    </p>
+    <p class="city__container__text">Velocidad del viento: <span class="text--bold">{{ weather.ws }} m/s</span>
+      <load-icon *ngIf="data === undefined"></load-icon>
+    </p>
+  </div>
+</div>
