@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-import { environment } from '../../../environments/environment';
 import { WeatherDat } from '../../models/weather_data';
 
 @Component({
@@ -10,16 +9,17 @@ import { WeatherDat } from '../../models/weather_data';
   styleUrls: ['./major-cities.component.scss']
 })
 export class MajorCitiesComponent implements OnInit {
+  key: string = 'ab3b3b99-9478-4e8e-ae6f-b69e9188efc7';
   data: any = undefined;
   cities: Array<any> = [];
   citiesLink: Array<string> = [
-    `https://api.airvisual.com/v2/city?city=Tokyo&state=Tokyo&country=Japan&key=${ environment.key }`,
-    `http://api.airvisual.com/v2/city?city=Los%20Angeles&state=California&country=USA&key=${ environment.key }`,
-    `https://api.airvisual.com/v2/city?city=Mexico%20City&state=Mexico%20City&country=Mexico&key=${ environment.key }`,
-    `https://api.airvisual.com/v2/city?city=Dhaka&state=Dhaka&country=Bangladesh&key=${ environment.key }`,
-    `https://api.airvisual.com/v2/city?city=Shanghai&state=Shanghai&country=China&key=${ environment.key }`,
-    `https://api.airvisual.com/v2/city?city=Lagos&state=Lagos&country=Nigeria&key=${ environment.key }`,
-    `https://api.airvisual.com/v2/city?city=Quilmes&state=Buenos%20Aires&country=Argentina&key=${ environment.key }`,
+    `https://api.airvisual.com/v2/city?city=Tokyo&state=Tokyo&country=Japan&key=${ this.key }`,
+    `http://api.airvisual.com/v2/city?city=Los%20Angeles&state=California&country=USA&key=${ this.key }`,
+    `https://api.airvisual.com/v2/city?city=Mexico%20City&state=Mexico%20City&country=Mexico&key=${ this.key }`,
+    `https://api.airvisual.com/v2/city?city=Dhaka&state=Dhaka&country=Bangladesh&key=${ this.key }`,
+    `https://api.airvisual.com/v2/city?city=Shanghai&state=Shanghai&country=China&key=${ this.key }`,
+    `https://api.airvisual.com/v2/city?city=Lagos&state=Lagos&country=Nigeria&key=${ this.key }`,
+    `https://api.airvisual.com/v2/city?city=Quilmes&state=Buenos%20Aires&country=Argentina&key=${ this.key }`,
   ];
 
   constructor( private http: HttpClient ) { }

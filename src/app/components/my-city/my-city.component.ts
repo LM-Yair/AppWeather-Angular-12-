@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-import { environment } from '../../../environments/environment';
 import { WeatherDat } from 'src/app/models/weather_data';
 
 @Component({
@@ -11,13 +10,14 @@ import { WeatherDat } from 'src/app/models/weather_data';
 })
 
 export class MyCityComponent implements OnInit {
+  key: string = 'ab3b3b99-9478-4e8e-ae6f-b69e9188efc7';
   data: any = undefined;
   weather: any;
 
   constructor( private http: HttpClient ) { }
 
   ngOnInit(): void {
-    this.http.get(`http://api.airvisual.com/v2/nearest_city?key=${ environment.key }`)
+    this.http.get(`http://api.airvisual.com/v2/nearest_city?key=${ this.key }`)
     .subscribe( res => {
       this.data = res;
       const weatherDat: WeatherDat = {
